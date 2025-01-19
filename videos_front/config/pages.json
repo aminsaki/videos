@@ -1,0 +1,71 @@
+{
+  "pages": {
+    "categories": {
+      "id": 1,
+      "name": "categories",
+      "title": "ایجاد و نمایش و دسته بندی ها"
+    },
+    "Excel": {
+      "id": 2,
+      "name": "excel",
+      "title": "اپلود فایل اکسل سوالات"
+    },
+    "listQuestions": {
+      "id": 3,
+      "name": "listQuestions",
+      "title": "لیست سوالات ها"
+    },
+    "CreateQuestions": {
+      "id": 4,
+      "name": "createQuestions",
+      "title": "ایجاد سوال های جدید"
+    },
+    "customers": {
+      "id": 5,
+      "name": "customers",
+      "title": "لیست افرادی شرکت در آزمون"
+    },
+    "users": {
+      "id": 6,
+      "name": "users",
+      "title": "مدیریت کاربران"
+    },
+    "reset": {
+      "id": 7,
+      "name": "reset",
+      "title": "ریست کردن ازمون"
+    },
+    "roles": {
+      "id": 8,
+      "name": "roles",
+      "title": "تنظیمات صفحه ها"
+    },
+    "agent": {
+      "id": 9,
+      "name": "agent",
+      "title": "ایجاد پنل"
+    },
+    "transactions": {
+      "id": 10,
+      "name": "transactions",
+      "title": "تراکنش ها"
+    },
+    "discount": {
+      "id": 11,
+      "name": "discount",
+      "title": "مدیریت کدهای تخفیف"
+    },
+
+    "approval": {
+      "id": 12,
+      "name": "approval",
+      "title": "مشاهده نتایج آزمون ها"
+    },
+    "approvalResult": {
+      "id": 13,
+      "name": "approvalResult",
+      "title": " مشاهده نتایج آزمون ها (مشاهد جزییات)"
+    }
+
+  }
+}

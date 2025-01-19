@@ -1,0 +1,12 @@
+{
+  "BASE_URL": "https://exam.holooacademy.com/Azmoon/backend/api/v1",
+  "REDIRECT": "https://holooacademy.com/",
+  "BACKEND_URL2": "http://127.0.0.1:8000/images/",
+  "BACKEND_URL": "https://exam.holooacademy.com/Azmoon/backend",
+  "PUBLIC_URL": "https://exam.holooacademy.com/Azmoon/backend/public/images/",
+  "PUBLIC_URL2": "http://127.0.0.1:8000/images/",
+  "URL": "https://exam.holooacademy.com"
+}
+
+
+

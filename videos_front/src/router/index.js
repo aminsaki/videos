@@ -7,6 +7,12 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'login',
+      meta: {layout: LayoutCustomers},
+      component: () => import('@/customers/views/Login/index.vue')
+    },
+    {
+      path: '/videos',
       name: 'videos',
       component: PageVideos,
       // beforeEnter: guards.AuthUser,

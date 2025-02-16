@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Logins\OtpController;
 use \Illuminate\Support\Facades\Route;
 
-
-Route::apiResource('authentications', Controllers\OtpController::class)->middleware('phone.throttle:15,1');
+Route::apiResource('loginOtp', OtpController::class);
 

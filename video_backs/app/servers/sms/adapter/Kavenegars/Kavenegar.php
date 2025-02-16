@@ -2,8 +2,9 @@
 
 namespace App\servers\sms\adapter\Kavenegars;
 
-use holoo\modules\Bases\servers\sms\SmsAbstract;
-use holoo\modules\Bases\servers\sms\SmsInterface;
+
+use App\servers\sms\SmsAbstract;
+use App\servers\sms\SmsInterface;
 use Illuminate\Support\Facades\Http;
 
 class Kavenegar extends SmsAbstract implements SmsInterface

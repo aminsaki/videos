@@ -1,10 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import PageVideos from "@/customers/views/customers/videos/index.vue";
 import LayoutCustomers  from "@/customers/commons/Layouts/index.vue"
+import * as guards from "./guard.js"
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+const routes = [
     {
       path: '/',
       name: 'login',
@@ -12,14 +10,17 @@ const router = createRouter({
       component: () => import('@/customers/views/Login/index.vue')
     },
     {
-      path: '/videos',
-      name: 'videos',
-      component: PageVideos,
-      // beforeEnter: guards.AuthUser,
+      path: '/panel/dashboard',
+      name: 'panel',
       meta: {layout: LayoutCustomers},
-    },
+      beforeEnter: guards.AuthUser,
+      component: () => import('@/customers/views/panel/dashboard.vue')
+    }
+]
 
-  ],
-})
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),  // استفاده از import.meta.env
+  routes
+});
 
-export default router
+export default router;

@@ -30,7 +30,6 @@
   </div>
 </template>
 <script setup>
-import {defineEmits} from 'vue'; // Make sure to import from 'vue' if using macros
 import {$ref} from 'unplugin-vue-macros/macros';
 import * as err from "@/commons/helpers/errors.js";
 import {checkEmptyInput_mobile} from "@/commons/helpers/validations.js";
@@ -50,7 +49,7 @@ async function btn_login() {
   statusFirst = 'true';
 
   try {
-    const response = await axios.get(`authentications?mobile=${mobile}`);
+    const response = await axios.get(`loginOtp?mobile=${mobile}`);
     if (response.data.status === "true") {
       statusFirst = 'false';
       return emit("stepTwo", mobile);

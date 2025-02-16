@@ -1,7 +1,7 @@
 <template>
   <div class="form-container sign-up-container">
     <form action="#">
-      <img src="@/commons/assets/images/logo.png" class="img-fluid w-50 mobile_login">
+      <img src="@/commons/assets/images/logo.png" class="img-fluid w-50 mobile_login" alt="">
       <div class="d-flex flex-row justify-content-center">
         <div class="p-2">
           <span>رمز یک‌بار مصرف به شماره <span>{{ mobile }}</span> پیامک شد.  </span><br>
@@ -82,10 +82,8 @@ import * as errors from "@/commons/helpers/errors.js";
 import {$ref} from 'unplugin-vue-macros/macros';
 import * as empty from "@/customers/commons/Users/emptyInput.js"
 import axios from "axios";
-import {InputdataDocument} from "@/customers/commons/Users/emptyInput.js";
 
 let arrayIndex = $ref([]);
-
 const props = defineProps({
   mobile: {type: Number}
 })
@@ -123,7 +121,7 @@ async function sendData() {
   // vali.checkEmptyInput_mobile(props.mobile)
   statusTwo = 'true';
   try {
-    const result = await axios.post("authentications", {
+    const result = await axios.post("loginOtp", {
       "mobile": props.mobile,
       "code": codes
     });
@@ -162,7 +160,7 @@ function padZero(num) {
 
 async function restart(phone) {
   console.log(phone);
-  const response = await axios.get(`authentications?mobile=${props.mobile}`);
+  const response = await axios.get(`loginOtp?mobile=${props.mobile}`);
   if (response.data.status === "true") {
     timers = 'true';
     countdown(2 * 60)

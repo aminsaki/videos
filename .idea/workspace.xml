@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="037d3ab0-b96b-4697-be07-7eb69db3e610" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video_backs/app/Http/Logins/OtpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/video_backs/app/Http/Logins/OtpController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video_backs/app/Http/Requests/OtpLoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/video_backs/app/Http/Requests/OtpLoginRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos_front/src/customers/views/Login/parts/stepOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/videos_front/src/customers/views/Login/parts/stepOne.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos_front/src/customers/views/Login/parts/stepTwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/videos_front/src/customers/views/Login/parts/stepTwo.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,25 +167,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/amin/Desktop/videos",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/home/amin/.local/share/JetBrains/Toolbox/apps/phpstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/amin/Desktop/videos&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/amin/.local/share/JetBrains/Toolbox/apps/phpstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/videos_front/src/commons" />
@@ -226,7 +230,7 @@
       <workItem from="1739792111874" duration="16339000" />
       <workItem from="1739873427052" duration="732000" />
       <workItem from="1740994522063" duration="28013000" />
-      <workItem from="1741092014732" duration="1867000" />
+      <workItem from="1741092014732" duration="6072000" />
     </task>
     <servers />
   </component>

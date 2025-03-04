@@ -2,17 +2,12 @@
   <div class="form-container sign-up-container">
     <form action="#">
       <img src="@/commons/assets/images/logo.png" class="img-fluid w-100 mobile_login" alt="">
-     <div class="d-flex justify-content-end w-100  " v-if="checkName === '' ">
-       <input type="text" v-model="name"
-               class=" from-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-               placeholder=" نام و نام خانوادگی خود را وارد کنید"/>
-      </div>
 
-      <div class="d-flex flex-row justify-content-center mt-2">
+      <div class="d-flex flex-row justify-content-center mt-2" v-if="timers ==='true'">
         <div class="p-1 text-sm ">
           <span>رمز یک‌بار مصرف به شماره <span>{{ mobile }}</span> پیامک شد.  </span><br>
           <span
-            class="btn  text-danger" @click="pageBack()" v-if="timers ==='true'">  ویرایش شماره</span>
+            class="btn border-2 p-2 text-lg  text-danger form-control   " @click="pageBack()" v-if="timers ==='true'">  ویرایش شماره</span>
         </div>
       </div>
       <div v-if="timers ==='true'">
@@ -46,7 +41,7 @@
           </div>
         </div>
 
-        <div class="d-flex flex-row mt-2 justify-content-center ">
+        <div class="d-flex flex-row mt-2 justify-content-center " v-if="timers ==='true'">
           <div class="p-2 ">
             <h1 class="text-justify p-2" style="text-align: justify; font-size: 12px; font-weight: bold;">تا <span
               class="text-danger  " id="date">  {{ date }} </span> ارسال مجدد رمز یک‌بار مصرف به شماره شما امکان‌پذیر
@@ -54,6 +49,7 @@
             </h1>
           </div>
         </div>
+
         <div class="d-flex flex-row mt-2">
           <div class="p-2 w-100 ">
 
@@ -76,7 +72,7 @@
       </div>
       <div v-else>
         <h1 class="text-justify p-2 mt-2" style="text-align: justify; font-size: 12px; font-weight: bold;">
-          <span @click="restart(mobile)" class="btn text-danger font-weight-bold">ارسال مجدد</span>
+          <span @click="restart(mobile)" class="btn   btn-success font-weight-bold">ارسال مجدد</span>
         </h1>
       </div>
     </form>
@@ -105,8 +101,6 @@ let codes = "";
 let statusTwo = $ref('false');
 
 let name = ""
-
-let checkName= ""
 
 function pageBack() {
   return emit("stepOne", props.mobile);
@@ -138,7 +132,6 @@ async function sendData() {
     const result = await axios.post("loginOtp", {
       "mobile": props.mobile,
        "code": codes,
-       'name': name
     });
     let response = result.data
     if (response.status === "true") {
@@ -191,14 +184,5 @@ async function restart(phone) {
 
 countdown(2 * 60)
 
-onMounted(() => {
-  const storedName = localStorage.getItem("name");
-  if (storedName) {
-    name = storedName;
-    checkName = storedName;
-  } else {
-    name = "";
-    checkName = "";
-  }
-});
+
 </script>

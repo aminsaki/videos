@@ -24,7 +24,6 @@ class OtpLoginRequest extends FormRequest
         return [
             'code' => 'required',
             'mobile' => 'required',
-            'name' => ['required', 'string', 'max:255'],
         ];
     }
     public function messages()
@@ -32,8 +31,6 @@ class OtpLoginRequest extends FormRequest
         return [
             'code.required' => 'رمز یک بارمصرف الزامی است.',
             'mobile.required' => 'شماره موبایل الزامی است.',
-            'name.required' => 'نام الزامی است.',
-            'name.string' => 'نام باید به صورت رشته‌ای باشد.',
         ];
     }
 }

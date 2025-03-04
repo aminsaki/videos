@@ -23,23 +23,30 @@ class OtpController extends Controller
     public function index(Request $request)
     {
         $mobile = $request->mobile;
+        $name = $request->name;
 
         $codeRandom = generateCodeRandom();
         $text = 'کد تایید:' . $codeRandom . PHP_EOL . ' گروه فناوری اطلاعات';
 
+         //if is users ok
         if ($user = User::where(['mobile' => $mobile])->first()) {
             SendSmsJob::dispatchSync($mobile, $text);
             Log::info('send sms', ['result' => $mobile, $codeRandom]);
             $this->setCacheAddMinutes($codeRandom, 'otp_code', $codeRandom, 'getUser', $user);
             return $this->responses->success($user, trans('validation.success'));
+         }
+          ///mobile and
+        if($mobile && $name ) {
+            $result = User::create(['name' => $name, 'mobile' => $mobile, 'email' => $mobile . '@gmail.com', 'password' => $mobile]);
+            $result->roles()->attach(2);
+            if ($result) {
+                SendSmsJob::dispatchSync($mobile, $text);
+                Log::info('send sms', ['result' => $mobile, $codeRandom]);
+                $this->setCacheAddMinutes($codeRandom, 'otp_code', $codeRandom, 'getUser', $user);
+                return $this->responses->success($result, trans('validation.success'));
+            }
         }
-          $result = User::create(['name' =>'' , 'mobile'=> $mobile ,  'email' => $mobile . '@gmail.com', 'password' => $mobile]);
-          $result->roles()->attach(2);
-
-        if ($result) {
-            SendSmsJob::dispatchSync($mobile, $text);
-            Log::info('send sms', ['result' => $mobile, $codeRandom]);
-            $this->setCacheAddMinutes($codeRandom, 'otp_code', $codeRandom, 'getUser', $user);
+        if($mobile) {
             return $this->responses->success('', trans('validation.success'));
         }
 
@@ -51,18 +58,14 @@ class OtpController extends Controller
     public function store(OtpLoginRequest  $request)
     {
         $code = $request['code'];
-        $name = $request->name;
         $otpCode = $this->getCache('otp_code', $code);
 
         if ($otpCode != $code) {
             return $this->responses->notFound('', trans('validation.errOtp'));
         }
+
         if (Auth::attempt(['mobile' => $request->mobile, 'password' => $request->mobile], true)) {
-            $user = User::with('roles')->where(['id' => Auth::id()])->first();
             $accessToken = 'Bearer ' . Auth::user()->createToken('Laravel spuutouts')->accessToken;
-
-            User::where(['id'=>$user->id])->update(['name' => $name]);
-
             return $this->responses->successLogin([
                 'list' => User::with('roles')->where(['id' => Auth::id()])->first(),
                 'access_token' => $accessToken,

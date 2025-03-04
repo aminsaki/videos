@@ -1,15 +1,15 @@
 <template>
   <div class="form-container sign-up-container">
     <form action="#">
-      <img src="@/commons/assets/images/logo.png" class="img-fluid w-50 mobile_login" alt="">
-     <div class="d-flex justify-content-center  w-100 " v-if="checkName === '' ">
+      <img src="@/commons/assets/images/logo.png" class="img-fluid w-100 mobile_login" alt="">
+     <div class="d-flex justify-content-end w-100  " v-if="checkName === '' ">
        <input type="text" v-model="name"
-               class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+               class=" from-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                placeholder=" نام و نام خانوادگی خود را وارد کنید"/>
       </div>
 
-      <div class="d-flex flex-row justify-content-center">
-        <div class="p-2  text-sm ">
+      <div class="d-flex flex-row justify-content-center mt-2">
+        <div class="p-1 text-sm ">
           <span>رمز یک‌بار مصرف به شماره <span>{{ mobile }}</span> پیامک شد.  </span><br>
           <span
             class="btn  text-danger" @click="pageBack()" v-if="timers ==='true'">  ویرایش شماره</span>
@@ -89,6 +89,7 @@ import {$ref} from 'unplugin-vue-macros/macros';
 import * as empty from "@/customers/commons/Users/emptyInput.js"
 import axios from "axios";
 import {useRoute} from 'vue-router';
+import {onMounted} from "vue";
 
 const route = useRoute();
 
@@ -102,8 +103,10 @@ let timers = $ref('true');
 let date = $ref();
 let codes = "";
 let statusTwo = $ref('false');
-let name = (localStorage.getItem('name'))? localStorage.getItem('name') : "";
-let checkName= $ref(localStorage.getItem('name'));
+
+let name = ""
+
+let checkName= ""
 
 function pageBack() {
   return emit("stepOne", props.mobile);
@@ -188,5 +191,14 @@ async function restart(phone) {
 
 countdown(2 * 60)
 
-
+onMounted(() => {
+  const storedName = localStorage.getItem("name");
+  if (storedName) {
+    name = storedName;
+    checkName = storedName;
+  } else {
+    name = "";
+    checkName = "";
+  }
+});
 </script>

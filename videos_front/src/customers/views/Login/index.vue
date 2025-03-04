@@ -13,7 +13,7 @@ import StepTwo from "@/customers/views/Login/parts/stepTwo.vue";
 import {$ref} from "unplugin-vue-macros/macros";
 import {onMounted} from "vue";
 
-let status = $ref("step2");
+let status = $ref("step1");
 let mobile = $ref("")
 let back_mobile = $ref("")
 

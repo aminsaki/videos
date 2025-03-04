@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="037d3ab0-b96b-4697-be07-7eb69db3e610" name="Changes" comment="" />
+    <list default="true" id="037d3ab0-b96b-4697-be07-7eb69db3e610" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videos_front/src/customers/views/Login/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/videos_front/src/customers/views/Login/index.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,7 +226,7 @@
       <workItem from="1739708653061" duration="14012000" />
       <workItem from="1739792111874" duration="16339000" />
       <workItem from="1739873427052" duration="732000" />
-      <workItem from="1740994522063" duration="25570000" />
+      <workItem from="1740994522063" duration="26517000" />
     </task>
     <servers />
   </component>

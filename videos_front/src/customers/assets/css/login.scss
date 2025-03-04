@@ -1,18 +1,11 @@
 body {
   background: #d8d7d9 !important;
 }
-
-.mobile_login{
-  display: none !important;
-}
-
 .desktop_login {
   display: block!important;
 }
 @media (max-width: 768px) {
-  .mobile_login {
-    display: block !important;
-  }
+
   .sign-in-container {
     width: 100% !important;
   }
@@ -73,9 +66,9 @@ button:focus {
 
 .sign-up-container {
   left: 0;
-  width: 50%;
+  width: 100%;
   z-index: 1;
-  opacity: 0;
+  //opacity: 0;
 }
 
 .overlay-container {
@@ -126,20 +119,12 @@ button:focus {
   transform: translateY(-20%);
 }
 
-/* Move signin to right */
-.container.right-panel-active .sign-in-container {
-  transform: translateY(100%);
-   display: none;
-}
 
-/* Move overlay to left */
-.container.right-panel-active .overlay-container {
-  transform: translateX(-100%);
-}
+
 
 /* Bring signup over signin */
 .container.right-panel-active .sign-up-container {
-  transform: translateX(100%);
+  transform: translateX(50%);
   opacity: 1;
   z-index: 5;
 }

@@ -5,7 +5,9 @@ import VueAxios from 'vue-axios'
 import customerApp from './customers/App.vue'
 import router from './router'
 import  "@/customers/assets/css/main_customers.scss"
-
+import  "@/commons/assets/css/iransans.css"
+import 'vue-toastification/dist/index.css';
+import Toast from 'vue-toastification';
 /// bootstrap
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -27,5 +29,6 @@ axios.defaults.baseURL = webUrl.BASE_URL
 const app = createApp(customerApp)
 app.use(createPinia())
 app.use(VueAxios, axios)
+app.use(Toast);
 app.use(router)
 app.mount('#app')

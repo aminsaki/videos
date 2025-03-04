@@ -4,6 +4,7 @@ namespace App\Http\Logins;
 
 use App\Helper\Responses;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\OtpLoginRequest;
 use App\Jobs\SendSmsJob;
 use App\Models\User;
 use App\Traits\OtpTrait;
@@ -22,6 +23,7 @@ class OtpController extends Controller
     public function index(Request $request)
     {
         $mobile = $request->mobile;
+
         $codeRandom = generateCodeRandom();
         $text = 'کد تایید:' . $codeRandom . PHP_EOL . ' گروه فناوری اطلاعات';
 
@@ -29,10 +31,11 @@ class OtpController extends Controller
             SendSmsJob::dispatchSync($mobile, $text);
             Log::info('send sms', ['result' => $mobile, $codeRandom]);
             $this->setCacheAddMinutes($codeRandom, 'otp_code', $codeRandom, 'getUser', $user);
-            return $this->responses->success('', trans('validation.success'));
+            return $this->responses->success($user, trans('validation.success'));
         }
-          $result = User::create(['name' => $mobile, 'mobile'=> $mobile ,  'email' => $mobile . '@gmail.com', 'password' => $mobile]);
+          $result = User::create(['name' =>'' , 'mobile'=> $mobile ,  'email' => $mobile . '@gmail.com', 'password' => $mobile]);
           $result->roles()->attach(2);
+
         if ($result) {
             SendSmsJob::dispatchSync($mobile, $text);
             Log::info('send sms', ['result' => $mobile, $codeRandom]);
@@ -45,11 +48,21 @@ class OtpController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function store(Request $request)
+    public function store(OtpLoginRequest  $request)
     {
-        if (Auth::attempt(['mobile' => $request->mobile, 'password' => $request->mobile], true)) {
+        $code = $request['code'];
+        $name = $request->name;
+        $otpCode = $this->getCache('otp_code', $code);
 
+        if ($otpCode != $code) {
+            return $this->responses->notFound('', trans('validation.errOtp'));
+        }
+        if (Auth::attempt(['mobile' => $request->mobile, 'password' => $request->mobile], true)) {
+            $user = User::with('roles')->where(['id' => Auth::id()])->first();
             $accessToken = 'Bearer ' . Auth::user()->createToken('Laravel spuutouts')->accessToken;
+
+            User::where(['id'=>$user->id])->update(['name' => $name]);
+
             return $this->responses->successLogin([
                 'list' => User::with('roles')->where(['id' => Auth::id()])->first(),
                 'access_token' => $accessToken,
@@ -57,6 +70,7 @@ class OtpController extends Controller
         }
         return Responses::create()->notFound('', trans('auth.account-not-found'));
     }
+
 
 
     /**

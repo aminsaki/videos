@@ -1,10 +1,9 @@
 {
-  "BASE_URL": "https://exam.holooacademy.com/Azmoon/backend/api/v1",
-  "REDIRECT": "https://holooacademy.com/",
+  "BASE_URL": "https://videoapi.holooacademy.com/api/v1",
+  "REDIRECT": "https://videoapi.holooacademy.com",
   "BACKEND_URL": "https://exam.holooacademy.com/Azmoon/backend",
-  "URL": "https://exam.holooacademy.com",
-  "PUBLIC_URL":"https://exam.holooacademy.com/Azmoon/backend/public/images",
-   "NODE_URL":"https://holoosmart.ir:5000/"
+  "URL": "https://videos.holooacademy.com",
+  "PUBLIC_URL":"https://videoapi.holooacademy.com/public/images"
 }
 
 

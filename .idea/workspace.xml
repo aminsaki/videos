@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="037d3ab0-b96b-4697-be07-7eb69db3e610" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/videos_front/src/customers/views/Login/parts/stepOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/videos_front/src/customers/views/Login/parts/stepOne.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/video_backs/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="SCSS File" />
+        <option value="Vue Composition API Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php">
+    <include_path>
+      <path value="$PROJECT_DIR$/video_backs/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/league/uri" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/league/config" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/league/uri-interfaces" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/league/flysystem-local" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/staabm/side-effects-detector" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/composer" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/league/event" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/laravel/pail" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/laravel/pint" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/video_backs/vendor/paragonie/random_compat" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2rnZmqVMkmmjME3fdGqdnH7BLCB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/amin/Desktop/videos/videos_front/src/commons&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/amin/.local/share/JetBrains/Toolbox/apps/phpstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/videos_front/src/commons" />
+      <recent name="$PROJECT_DIR$/videos_front/src/customers/views/panel" />
+      <recent name="$PROJECT_DIR$/video_backs" />
+      <recent name="$PROJECT_DIR$/videos_front" />
+      <recent name="$PROJECT_DIR$/video_backs/app/servers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/videos_front/src/customers" />
+      <recent name="$PROJECT_DIR$/videos_front/src/components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner configuration_file="$PROJECT_DIR$/video_backs/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="037d3ab0-b96b-4697-be07-7eb69db3e610" name="Changes" comment="" />
+      <created>1737196960930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737196960930</updated>
+      <workItem from="1737196961967" duration="1302000" />
+      <workItem from="1737208467804" duration="534000" />
+      <workItem from="1737285088211" duration="14905000" />
+      <workItem from="1739355425651" duration="9114000" />
+      <workItem from="1739372223387" duration="1178000" />
+      <workItem from="1739708653061" duration="14012000" />
+      <workItem from="1739792111874" duration="16339000" />
+      <workItem from="1739873427052" duration="732000" />
+      <workItem from="1740994522063" duration="25031000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

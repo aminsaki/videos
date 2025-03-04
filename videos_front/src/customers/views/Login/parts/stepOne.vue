@@ -37,7 +37,7 @@ import * as err from "@/commons/helpers/errors.js";
 import {checkEmptyInput_mobile} from "@/commons/helpers/validations.js";
 import axios from "axios";
 
-const emit = defineEmits(['stepTwo']);
+const emit = defineEmits(['stepOne']);
 
 const props = defineProps({
   back_mobile: {type: Number}

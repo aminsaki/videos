@@ -1,9 +1,18 @@
 <template>
   <div
-    class="min-h-screen flex flex-col bg-cover px-4 py-5"
+    v-if="!route.params.uid || route.params.uid === 'undefined'"
+    class="min-h-screen flex items-center justify-center bg-gray-100"
+    >
+    <div class=" form-control card p-4 glassmorphism text-center animate-fade-in">
+      <h2 class="text-lg font-semibold text-gray-700">ویدیو برای نمایش وجود ندارد</h2>
+      <p class="text-gray-500 mt-2">لطفاً لینک صحیح را بررسی کنید.</p>
+    </div>
+  </div>
+
+  <div v-else
+    class="min-h-screen d-flex flex-col bg-cover px-4 py-5"
     :style="{ backgroundImage: `url('@/customers/assets/images/background.jpg')` }"
   >
-    <!-- ویدیو در بالا -->
     <div class="w-full flex justify-center">
       <div class="w-full max-w-4xl aspect-w-9 aspect-h-16 sm:aspect-w-16 sm:aspect-h-9 rounded overflow-hidden">
         <video
@@ -24,7 +33,6 @@
       </div>
     </div>
 
-    <!-- توضیحات در پایین صفحه -->
     <div class="container bg-white shadow-lg rounded-lg p-6 w-full max-w-4xl mt-4 flex flex-col items-center">
       <h2 class="text-center font-bold text-xl md:text-2xl mb-4 avatar-title ">
         {{ videos.title || "عنوان ویدیو" }}
@@ -61,9 +69,7 @@ const fetchLinks = async () => {
       }
     }, 500);
   } catch (error) {
-    myErrors(error);
     toast.error("خطا در دریافت داده‌ها");
-    console.error(error);
   }
 };
 

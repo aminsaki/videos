@@ -8,14 +8,16 @@
     <!-- فیلد شماره موبایل -->
     <div class="d-flex justify-content-center w-100"  v-if="!showNameField">
       <input type="text" v-model="mobile" maxlength="11" minlength="11"
-             class="bg-gray-50 mt-2 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+             class="p-3  form-control  "
              placeholder="شماره تلفن همراه خود را وارد کنید"/>
     </div>
 
-    <div class="d-flex justify-content-end w-100 mt-5" v-if="showNameField">
+    <div class="d-flex justify-content-end w-100" v-if="showNameField">
+     <label class="w-100">
       <input type="text" v-model="username"
-             class="from-control bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+             class="p-3  form-control  "
              placeholder="نام و نام خانوادگی خود را وارد کنید"/>
+     </label>
     </div>
 
     <button @click="btn_login()" type="button" v-if="statusFirst === 'false'"
@@ -43,7 +45,7 @@
 <script setup>
 import {$ref} from 'unplugin-vue-macros/macros';
 import * as err from "@/commons/helpers/errors.js";
-import {checkEmptyInput_mobile} from "@/commons/helpers/validations.js";
+import {checkEmptyInput, checkEmptyInput_mobile} from "@/commons/helpers/validations.js";
 import axios from "axios";
 
 const emit = defineEmits(['stepOne']);
@@ -58,6 +60,9 @@ let checkName = "";
 let showNameField = $ref(false);  // نمایش یا عدم نمایش فیلد نام
 
 async function btn_login() {
+   if(showNameField){
+     checkEmptyInput(username ,"نام خانوادگی الزامی است.")
+     }
   checkEmptyInput_mobile(mobile);
   statusFirst = 'true';
 

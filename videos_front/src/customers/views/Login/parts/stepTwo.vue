@@ -3,14 +3,14 @@
     <form action="#">
       <img src="@/commons/assets/images/logo.png" class="img-fluid w-100 mobile_login" alt="">
 
-      <div class="d-flex flex-row justify-content-center mt-2" v-if="timers ==='true'">
-        <div class="p-1 text-sm ">
-          <span>رمز یک‌بار مصرف به شماره <span>{{ mobile }}</span> پیامک شد.  </span><br>
-          <span
-            class="btn border-2 p-2 text-lg  text-danger form-control   " @click="pageBack()" v-if="timers ==='true'">  ویرایش شماره</span>
+       <div class="d-flex flex-row justify-content-center " v-if="timers ==='true'">
+        <div class="p-2  text-sm ">
+          <span>رمز یک‌بار مصرف به شماره <span>{{ mobile }}</span> پیامک شد  </span><br>
         </div>
       </div>
-      <div v-if="timers ==='true'">
+
+      <div v-if="timers ==='true'" class="mt-3">
+
         <div class="d-flex flex-row handleInput justify-content-center ">
 
           <div style="display: flex; align-items: center;">
@@ -42,12 +42,16 @@
         </div>
 
         <div class="d-flex flex-row mt-2 justify-content-center " v-if="timers ==='true'">
-          <div class="p-2 ">
-            <h1 class="text-justify p-2" style="text-align: justify; font-size: 12px; font-weight: bold;">تا <span
+            <h1 class="text-justify p-2" style="text-align: right; font-size: 12px; font-weight: bold;">تا <span
               class="text-danger  " id="date">  {{ date }} </span> ارسال مجدد رمز یک‌بار مصرف به شماره شما امکان‌پذیر
               است.
             </h1>
-          </div>
+        </div>
+
+        <div>
+        <span
+          class="btn mt-2  btn-outline-dark  form-control" @click="pageBack()"
+          v-if="timers ==='true'">  ویرایش شماره</span>
         </div>
 
         <div class="d-flex flex-row mt-2">
@@ -131,7 +135,7 @@ async function sendData() {
   try {
     const result = await axios.post("loginOtp", {
       "mobile": props.mobile,
-       "code": codes,
+      "code": codes,
     });
     let response = result.data
     if (response.status === "true") {

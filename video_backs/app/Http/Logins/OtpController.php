@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Logins;
-
 use App\Helper\Responses;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\OtpLoginRequest;
@@ -43,6 +41,7 @@ class OtpController extends Controller
                 SendSmsJob::dispatchSync($mobile, $text);
                 Log::info('send sms', ['result' => $mobile, $codeRandom]);
                 $this->setCacheAddMinutes($codeRandom, 'otp_code', $codeRandom, 'getUser', $user);
+
                 return $this->responses->success($result, trans('validation.success'));
             }
         }
